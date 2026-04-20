@@ -26,8 +26,8 @@ jobs:
       - name: Checkout landscape2 with fix
         uses: actions/checkout@v5
         with:
-          repository: cynthia-sg/landscape2
-          ref: fix-quiz-url
+          repository: cncf/landscape2
+          ref: cynthia-sg/fix-quiz-url
           path: landscape2-src
 
       - name: Setup Node
