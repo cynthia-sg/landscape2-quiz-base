@@ -20,14 +20,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout demo repository
         uses: actions/checkout@v5
 
-      - name: Install landscape2
+      - name: Checkout landscape2 with fix
+        uses: actions/checkout@v5
+        with:
+          repository: cynthia-sg/landscape2
+          ref: fix-quiz-url
+          path: landscape2-src
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Enable Yarn
         run: |
-          curl --proto '=https' --tlsv1.2 -LsSf \
-            https://github.com/cncf/landscape2/releases/download/v1.1.0/landscape2-installer.sh | sh
-          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+          corepack enable
+          corepack prepare yarn@1.22.22 --activate
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: 1.93.1
+
+      - name: Install wasm-pack
+        run: curl -fsSL https://rustwasm.github.io/wasm-pack/installer/init.sh | sh
+
+      - name: Install landscape2 from source
+        run: cargo install --path ./landscape2-src/crates/cli --force
 
       - name: Build landscape
         run: |
