@@ -1,0 +1,9 @@
+categories:
+  - category: Demo Category
+    content: |
+      This guide accompanies the GitHub Pages quiz base path demo.
+
+    subcategories:
+      - subcategory: Quiz Items
+        content: |
+          These items exist only to provide predictable quiz options.

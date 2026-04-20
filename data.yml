@@ -1,0 +1,17 @@
+categories:
+  - name: Demo Category
+    subcategories:
+      - name: Quiz Items
+        items:
+          - name: Project Alpha
+            description: Demo item used by the quiz base path example.
+            homepage_url: https://example.com/project-alpha
+            logo: cncf.svg
+          - name: Project Beta
+            description: Demo item used by the quiz base path example.
+            homepage_url: https://example.com/project-beta
+            logo: cncf.svg
+          - name: Project Gamma
+            description: Demo item used by the quiz base path example.
+            homepage_url: https://example.com/project-gamma
+            logo: cncf.svg

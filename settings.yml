@@ -1,0 +1,5 @@
+foundation: Demo
+url: https://your-org.github.io/landscape2-quiz-base-path-demo
+base_path: /landscape2-quiz-base-path-demo
+description: Demo landscape to verify quiz data loading on GitHub Pages subpaths.
+grid_items_size: large

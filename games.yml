@@ -1,0 +1,14 @@
+quiz:
+  questions:
+    - title: "Which item should you select to verify the quiz loads correctly?"
+      options:
+        - item: Project Alpha
+          correct: true
+        - item: Project Beta
+        - item: Project Gamma
+    - title: "Which item is the intentionally correct answer in question two?"
+      options:
+        - item: Project Alpha
+        - item: Project Beta
+          correct: true
+        - item: Project Gamma
